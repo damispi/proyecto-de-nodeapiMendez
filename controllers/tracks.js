@@ -1,9 +1,9 @@
 const {tracksModel}= require("../models")
+//nada
 
-
-const getItems=(req,res)=> {
+const getItems=async(req,res)=> {
     //obtener lista de base de datos
-  const data=tracksModel.find({})
+  const data= await tracksModel.find({})
     res.send({data})
 };
 const getItem=(req,res)=> {
